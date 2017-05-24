@@ -1,4 +1,4 @@
-# LaraCrypt 0.1.0
+# LaraCrypt 0.1.x
 
 [![Version](https://img.shields.io/cocoapods/v/LaraCrypt.svg?style=flat)](http://cocoapods.org/pods/LaraCrypt)
 [![License](https://img.shields.io/cocoapods/l/LaraCrypt.svg?style=flat)](http://cocoapods.org/pods/LaraCrypt)
