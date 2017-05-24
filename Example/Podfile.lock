@@ -1,0 +1,16 @@
+PODS:
+  - LaraCrypt (0.1.0)
+
+DEPENDENCIES:
+  - LaraCrypt (from `../`)
+
+EXTERNAL SOURCES:
+  LaraCrypt:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LaraCrypt: a13b3d9fcd78c3e378798d3f9c9523278a42dc86
+
+PODFILE CHECKSUM: d9909ba9f07029872e6b6649a7192750db027d83
+
+COCOAPODS: 1.2.1

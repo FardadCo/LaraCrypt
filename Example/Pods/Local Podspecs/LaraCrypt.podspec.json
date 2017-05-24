@@ -1,0 +1,22 @@
+{
+  "name": "LaraCrypt",
+  "version": "0.1.0",
+  "summary": "A short description of LaraCrypt.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/r.khalafi65@gmail.com/LaraCrypt",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "r.khalafi65@gmail.com": "r.khalafi65@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/r.khalafi65@gmail.com/LaraCrypt.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LaraCrypt/Classes/**/*"
+}

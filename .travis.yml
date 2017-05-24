@@ -1,0 +1,7 @@
+osx_image: xcode8.3
+language: objective-c
+xcode_project: LaraCrypt.xcodeproj 
+xcode_scheme: LaraCrypt
+script:
+- set -o pipefail && xcodebuild test -workspace Example/LaraCrypt.xcworkspace -scheme LaraCrypt-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- pod lib lint

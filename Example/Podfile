@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LaraCrypt_Example' do
+  pod 'LaraCrypt', :path => '../'
+
+  target 'LaraCrypt_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

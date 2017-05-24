@@ -1,0 +1,6 @@
+framework module LaraCrypt {
+  umbrella header "LaraCrypt-umbrella.h"
+
+  export *
+  module * { export * }
+}
