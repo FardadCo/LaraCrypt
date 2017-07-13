@@ -30,6 +30,7 @@ There is a main public function in LaraCrypt calss:<br>
 let key : String = "u6KuXJLIUwEUl7noY8J8H1ffDRwLC/5gjaWW1qTQ3hE="
 let message : String = "123456"
 let encryptedString : String = LaraCrypt().encrypt(Message: message, Key: key)
+let decryptedString : String = LaraCrypt().decrypt(Message: encryptedString, Key: key)
 ```
 
 ## Support

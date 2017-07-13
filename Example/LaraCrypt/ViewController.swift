@@ -28,6 +28,10 @@ class ViewController: UIViewController {
     
     @IBAction func encryptionButtonClicked(_ sender: UIButton) {
         resultTextView.text = LaraCrypt().encrypt(Message: messageTextView.text, Key: keyTextView.text)
+        
+        let decrypted:String = LaraCrypt().decrypt(Message: resultTextView.text, Key: keyTextView.text)
+        
+        print(decrypted)
     }
 
 }

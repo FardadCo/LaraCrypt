@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'LaraCrypt'
-s.version          = '0.1.1'
+s.version          = '0.1.2'
 s.summary          = 'Laravel encryption method for Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ s.summary          = 'Laravel encryption method for Swift.'
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
 s.description      = <<-DESC
-Laravel encryption method with using AES-256-CBC and base64 key for Swift.
+Laravel encryption and decryption method with using AES-256-CBC and base64 key for Swift.
 DESC
 
 s.homepage         = 'https://github.com/FardadCo/LaraCrypt'

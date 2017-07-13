@@ -45,6 +45,26 @@ public class LaraCrypt: NSObject {
         return String(format:"s:%lu:\"%@\";",str.characters.count,str)
     }
     
+    //MARK: Converting JSON to string model
+    func stringUnserilizer(String str:String) -> String {
+        let arr:Array<String> = str.components(separatedBy: ":")
+        let stringChangedA:String = arr.last!.replacingOccurrences(of: "\"", with: "")
+        let stringChangedB:String = stringChangedA.replacingOccurrences(of: ";", with: "")
+        return stringChangedB
+    }
+    
+    //MARK: Converting JSON to Dictionary model
+    func convertToDictionary(text: String) -> [String: String]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: String]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
+    
     //MARK: Making hmac like hash_hmac in PHP
     func HMAC_CREATOR(MIX_STR mixStr:String,KEY_DATA_UINT8 keyDataUint8:Array<UInt8>) -> String {
         let signatureData : Data = mixStr.data(using: .utf8)!
@@ -131,6 +151,46 @@ public class LaraCrypt: NSObject {
         }
         
     }
+    
+    //MARK: Laravel decryption method
+    public func decrypt(Message message:String,Key key:String) -> String {
+        
+        //Preparing initial data
+        let keyData:Data = Data(base64Encoded: key)!
+        let messageDecodedData = NSData(base64Encoded: message, options:.ignoreUnknownCharacters)
+        let messageDecodedString = NSString(data: messageDecodedData! as Data, encoding: String.Encoding.utf8.rawValue)
+        
+        //Combinig base64 iv with base64 encrypted data and Hmac
+        let combineDict:Dictionary = convertToDictionary(text: messageDecodedString! as String)!
+        
+        //IV
+        let ivStr:String = combineDict["iv"]!
+        let ivData:Data = Data(base64Encoded: ivStr)!
+        
+        //Value
+        let value:String = combineDict["value"]!
+        let valueData:Data =  Data(base64Encoded: value)!
+        
+        //Decrypting data
+        let decData = AES256CBC(data: valueData, keyData: keyData, ivData: ivData, operation: kCCDecrypt)
+        
+        //Decrypted UInt8
+        let decDataUInt8:Array<UInt8> = DATA_TO_UINT8(decData)
+        
+        //Decrypted Data
+        let decAsData = NSData(bytes: decDataUInt8 as [UInt8], length: decDataUInt8.count)
+        
+        //Serialized Decrypted Message
+        let deceSrializedString:String = String(data: decAsData as Data, encoding: String.Encoding.utf8)!
+        
+        //Unserialized Decrypted Message
+        let decrypted:String = stringUnserilizer(String: deceSrializedString)
+        
+        
+        return decrypted
+    }
+    
+    
     
     
 }
