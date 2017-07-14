@@ -12,9 +12,8 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		83B224B21F17885100D9A52C /* LaraCrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B224AF1F17885100D9A52C /* LaraCrypt.framework */; };
-		83B224B31F17885100D9A52C /* Pods_LaraCrypt_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B224B01F17885100D9A52C /* Pods_LaraCrypt_Example.framework */; };
-		83B224B41F17885100D9A52C /* Pods_LaraCrypt_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B224B11F17885100D9A52C /* Pods_LaraCrypt_Tests.framework */; };
+		83E715E51ED57C060032D740 /* LaraCrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E715E41ED57C060032D740 /* LaraCrypt.framework */; };
+		AD9C419DB2795749993ED961 /* Pods_LaraCrypt_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94506D02400421C0ACEB6DEC /* Pods_LaraCrypt_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +21,7 @@
 		20A52C7997CDE1CF92A82CEB /* LaraCrypt.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LaraCrypt.podspec; path = ../LaraCrypt.podspec; sourceTree = "<group>"; };
 		52F705CBB157CDB784CAFA7B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5789439EDBA77DDAE99B605A /* Pods-LaraCrypt_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaraCrypt_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaraCrypt_Example/Pods-LaraCrypt_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		57F296C45E667F83AA54B9B0 /* Pods_LaraCrypt_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaraCrypt_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* LaraCrypt_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaraCrypt_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +31,8 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		83B224AF1F17885100D9A52C /* LaraCrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaraCrypt.framework; path = "Pods/../build/Debug-iphoneos/LaraCrypt/LaraCrypt.framework"; sourceTree = "<group>"; };
-		83B224B01F17885100D9A52C /* Pods_LaraCrypt_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_LaraCrypt_Example.framework; path = "Pods/../build/Debug-iphoneos/Pods_LaraCrypt_Example.framework"; sourceTree = "<group>"; };
-		83B224B11F17885100D9A52C /* Pods_LaraCrypt_Tests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_LaraCrypt_Tests.framework; path = "Pods/../build/Debug-iphoneos/Pods_LaraCrypt_Tests.framework"; sourceTree = "<group>"; };
+		83E715E41ED57C060032D740 /* LaraCrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaraCrypt.framework; path = "Build/Products/Debug-iphonesimulator/LaraCrypt/LaraCrypt.framework"; sourceTree = "<group>"; };
+		94506D02400421C0ACEB6DEC /* Pods_LaraCrypt_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaraCrypt_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1093CB6E9FB7EC51FFC1972 /* Pods-LaraCrypt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaraCrypt_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaraCrypt_Tests/Pods-LaraCrypt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE2AB606D2BF5B55B6C82D57 /* Pods-LaraCrypt_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaraCrypt_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaraCrypt_Tests/Pods-LaraCrypt_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EAA10FB988BFFCBBAA23A5CE /* Pods-LaraCrypt_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaraCrypt_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaraCrypt_Example/Pods-LaraCrypt_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,9 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B224B21F17885100D9A52C /* LaraCrypt.framework in Frameworks */,
-				83B224B31F17885100D9A52C /* Pods_LaraCrypt_Example.framework in Frameworks */,
-				83B224B41F17885100D9A52C /* Pods_LaraCrypt_Tests.framework in Frameworks */,
+				83E715E51ED57C060032D740 /* LaraCrypt.framework in Frameworks */,
+				AD9C419DB2795749993ED961 /* Pods_LaraCrypt_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,9 +134,9 @@
 		A9F65604C496073C01B41596 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83B224AF1F17885100D9A52C /* LaraCrypt.framework */,
-				83B224B01F17885100D9A52C /* Pods_LaraCrypt_Example.framework */,
-				83B224B11F17885100D9A52C /* Pods_LaraCrypt_Tests.framework */,
+				83E715E41ED57C060032D740 /* LaraCrypt.framework */,
+				94506D02400421C0ACEB6DEC /* Pods_LaraCrypt_Example.framework */,
+				57F296C45E667F83AA54B9B0 /* Pods_LaraCrypt_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -389,14 +387,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator/LaraCrypt",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/LaraCrypt",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = LaraCrypt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULEMAP_FILE = "";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,14 +407,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator/LaraCrypt",
-					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/LaraCrypt",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = LaraCrypt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULEMAP_FILE = "";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

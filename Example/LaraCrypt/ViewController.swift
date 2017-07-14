@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         let decrypted:String = LaraCrypt().decrypt(Message: resultTextView.text, Key: keyTextView.text)
         
         print(decrypted)
+        
     }
 
 }
