@@ -6,7 +6,7 @@
 [![Language](https://img.shields.io/badge/language-swift-orange.svg)](https://swift.org/)
 [![OS Version](https://img.shields.io/badge/made%20with-%3C3-orange.svg)](http://cocoapods.org/pods/LaraCrypt)
 
-This is a function for encrypt data such as Laravel encryption in Swift.
+This is a function for encrypt and decrypt data such as Laravel encryption in Swift.
 
 ## Requirements
 
@@ -26,6 +26,7 @@ pod 'LaraCrypt'
 
 There is a main public function in LaraCrypt calss:<br>
 `encrypt` - For use this fucntion you should set two parameters contain base64 key with 44 characters length and your message as a string that you want to be encrypted  
+`decrypt` - For use this fucntion you should set two parameters contain base64 key with 44 characters length and your encrypted message as a string that you want to be decrypted 
 ```ruby
 let key : String = "u6KuXJLIUwEUl7noY8J8H1ffDRwLC/5gjaWW1qTQ3hE="
 let message : String = "123456"
