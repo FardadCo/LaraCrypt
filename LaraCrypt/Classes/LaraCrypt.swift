@@ -15,6 +15,41 @@ extension Data {
     }
 }
 
+extension String {
+    func indexer(from: Int) -> Index {
+        return self.index(startIndex, offsetBy: from)
+    }
+    
+    func substr(from: Int) -> String {
+        let fromIndex = indexer(from: from)
+        return substring(from: fromIndex)
+    }
+    
+    func substr(to: Int) -> String {
+        let toIndex = indexer(from: to)
+        return substring(to: toIndex)
+    }
+    
+    func substr(with r: Range<Int>) -> String {
+        let startIndex = indexer(from: r.lowerBound)
+        let endIndex = indexer(from: r.upperBound)
+        return substring(with: startIndex..<endIndex)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class LaraCrypt: NSObject {
     
     //MARK: Generating random string with 16 char length
@@ -47,9 +82,15 @@ public class LaraCrypt: NSObject {
     
     //MARK: Converting JSON to string model
     func stringUnserilizer(String str:String) -> String {
-        let arr:Array<String> = str.components(separatedBy: ":")
-        let stringChangedA:String = arr.last!.replacingOccurrences(of: "\"", with: "")
-        let stringChangedB:String = stringChangedA.replacingOccurrences(of: ";", with: "")
+        var index:Int  = 0
+        for (i,char) in str.characters.enumerated() {
+            if char == "\"" {
+                index = i
+                break
+            }
+        }
+        let stringChangedA:String = str.substr(from: index+1)
+        let stringChangedB:String = stringChangedA.substr(to: stringChangedA.characters.count-2)
         return stringChangedB
     }
     
@@ -123,7 +164,7 @@ public class LaraCrypt: NSObject {
         let serilizedMessageData:Data = serilizedMessage.data(using: .utf8)!
         let keyData:Data      = Data(base64Encoded: key)!
         let keyDataUint8      = DATA_TO_UINT8(keyData)
-        let iv  :String              = generateRandomBytes()!
+        let iv  :String       = generateRandomBytes()!
         let ivBase6Str:String = Data(iv.utf8).base64EncodedString()
         let ivData:Data = iv.data(using: .utf8)!
         
@@ -131,7 +172,7 @@ public class LaraCrypt: NSObject {
         let encData = AES256CBC(data: serilizedMessageData, keyData: keyData, ivData: ivData, operation: kCCEncrypt)
         
         //Converting encrypted data to base64
-        let encDataBase64Str = encData.base64EncodedString(options:.lineLength64Characters)
+        let encDataBase64Str = encData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
         
         //Mixing base64 iv with base64 encrypted data
         let mixStr:String =  String(format:"%@%@",ivBase6Str,encDataBase64Str)
