@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'LaraCrypt'
-s.version          = '0.1.5'
+s.version          = '0.1.6'
 s.summary          = 'Laravel encryption and decryption method for Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ s.ios.deployment_target = '9.0'
 s.social_media_url = 'https://twitter.com/fardadco'
 
 
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 s.source_files = 'LaraCrypt/Classes/**/*'
 
 # s.resource_bundles = {
