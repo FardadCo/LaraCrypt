@@ -54,12 +54,15 @@ public class LaraCrypt: NSObject {
     
     //MARK: Generating random string with 16 char length
     func generateRandomBytes() -> String? {
-        
         var keyData = Data(count: 10)
-        let result = keyData.withUnsafeMutableBytes {
-            (mutableBytes: UnsafeMutablePointer<UInt8>) -> Int32 in
-            SecRandomCopyBytes(kSecRandomDefault, keyData.count, mutableBytes)
+        let bytes = keyData.withUnsafeMutableBytes { pointer -> UnsafeMutablePointer<UInt8>? in
+            if let bytes = pointer.bindMemory(to: UInt8.self).baseAddress {
+                return bytes
+            }
+            return nil
         }
+        guard let bytes = bytes else { return nil }
+        let result = SecRandomCopyBytes(kSecRandomDefault, keyData.count, bytes)
         if result == errSecSuccess {
             return keyData.base64EncodedString()
         } else {
@@ -77,20 +80,20 @@ public class LaraCrypt: NSObject {
     
     //MARK: Converting string to JSON model
     func stringSerilizer(String str:String) -> String {
-        return String(format:"s:%lu:\"%@\";",str.characters.count,str)
+        return String(format:"s:%lu:\"%@\";",str.count,str)
     }
     
     //MARK: Converting JSON to string model
     func stringUnserilizer(String str:String) -> String {
         var index:Int  = 0
-        for (i,char) in str.characters.enumerated() {
+        for (i,char) in str.enumerated() {
             if char == "\"" {
                 index = i
                 break
             }
         }
         let stringChangedA:String = str.substr(from: index+1)
-        let stringChangedB:String = stringChangedA.substr(to: stringChangedA.characters.count-2)
+        let stringChangedB:String = stringChangedA.substr(to: stringChangedA.count-2)
         return stringChangedB
     }
     
