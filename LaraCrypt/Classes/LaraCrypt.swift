@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CryptoKit
+import CommonCrypto
 
 extension Data {
     //MARK: Converting string to Hex
